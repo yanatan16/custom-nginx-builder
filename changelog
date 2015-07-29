@@ -1,0 +1,16 @@
+nginx (1.6.2-5-custom) unstable; urgency=high
+
+  [ Jon Eisen ]
+  * Update modules:
+    + update headers-more
+    + update nginx-development-kit
+    + update nginx-lua
+  * Add modules:
+    + nginx-statsd
+    + naxsi
+    + redis2
+    + set-misc
+    + encrypted-session
+
+ -- Jon Eisen <jon@joneisen.me>  Wed, 29 July 2015 11:44:24 -0600
+

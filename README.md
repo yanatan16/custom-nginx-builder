@@ -1,35 +1,23 @@
 # Custom Nginx Builder
 
-## Start container
+## Usage
+
+To copy out the built packages:
 
 ```
 docker run -it yanatan16/custom-nginx-builder bash
 ```
 
-## Build custom nginx
+Then upload to whereever you keep your packages.
 
-Download any custom modules you want like so:
+## Changing
 
-```
-cd /app/nginx-$VERSION/debian/modules
-git clone https://github.com/zebrafishlabs/nginx-statsd nginx-statsd
-```
-
-Then add it to the rules
+To add more packages or update some, just fork this repo and update the `Dockerfile`, `rules`, and `changelog`. Then rebuild with:
 
 ```
-vim /app/nginx-$VERSION/debian/rules
-
---add-module=$(MODULESDIR)/nginx-statsd \
+docker build -t <username>/custom-nginx-builder .
 ```
 
-Then update the changelog at /app/nginx-$VERSION/debian/changelog
+## License
 
-Then build
-
-```
-cd /app/nginx-$VERSION
-dpkg-buildpackage -b
-```
-
-Then upload to your favorite host!
+See `LICENSE` file.
