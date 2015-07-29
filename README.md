@@ -1,3 +1,13 @@
+# Custom Nginx Builder
+
+## Start container
+
+```
+docker run -it yanatan16/custom-nginx-builder bash
+```
+
+## Build custom nginx
+
 Download any custom modules you want like so:
 
 ```
