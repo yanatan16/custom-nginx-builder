@@ -9,4 +9,4 @@ RUN echo "deb-src http://httpredir.debian.org/debian jessie main" >> /etc/apt/so
 
 WORKDIR /app
 
-ADD instructions.txt /app/instructions.txt
+ADD README.md /app/README.md
